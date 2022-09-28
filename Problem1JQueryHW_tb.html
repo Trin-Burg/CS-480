@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>With JQuery</title>
+    <style>
+        #div1.hidden{
+            display: none
+        }
+        
+        #div1.onclick{
+            border: solid 2px orangered;
+            background-color: azure;
+            width: 50%;
+            height: fit-content;
+            
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+       /*/ function channgeValues(){
+            var val1 = document.getElementById("input1").value;
+            var val2 = document.getElementById("input2").value;
+
+            document.getElementById("input1").value = val2;
+            document.getElementById("input2").value = val1;
+        }*/
+        $(document).ready(function(){
+            $("button").click(function(){
+                var val1 = $("#input1").val();
+                var val2 = $("#input2").val();
+
+                $("#input1").val(val2);
+                $("#input2").val(val1);
+            });
+        });
+
+        $(document).ready(function() {
+             $("div#div1").removeClass("hidden");
+        });
+        
+    </script>
+</head>
+<body>
+    <h2>JQuery Homework</h2>
+
+    <lable>Input 1</lable>
+    <input type="text" name="ip1"  id="input1">
+    <p></p>
+    <label>Input 2 </label>
+    <input type="text" name="ip2" id="input2">
+    <p></p>
+    <button>Switch Values</button>
+    <div id="div1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua. Orci a scelerisque purus semper eget duis at tellus. Cursus metus aliquam eleifend mi 
+            in nulla posuere sollicitudin. Aliquam purus sit amet luctus. Ullamcorper eget nulla facilisi etiam. Elit 
+            eget gravida cum sociis natoque penatibus et magnis. Eget velit aliquet sagittis id consectetur purus. 
+            Sagittis orci a scelerisque purus semper eget duis at. Amet mattis vulputate enim nulla aliquet porttitor 
+            lacus luctus. Lectus nulla at volutpat diam ut. Mollis aliquam ut porttitor leo a. Felis donec et odio 
+            pellentesque diam volutpat commodo. Felis donec et odio pellentesque diam. Semper auctor neque vitae tempus 
+            quam pellentesque nec nam. Venenatis lectus magna fringilla urna porttitor rhoncus. Dictumst quisque sagittis 
+            purus sit amet volutpat consequat mauris. Eu nisl nunc mi ipsum faucibus vitae aliquet.
+        </p>
+        <p>
+            Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Maecenas volutpat blandit aliquam etiam erat. 
+            Enim neque volutpat ac tincidunt vitae. Id leo in vitae turpis massa. In arcu cursus euismod quis. Quis 
+            viverra nibh cras pulvinar mattis nunc sed. At urna condimentum mattis pellentesque id nibh. Risus sed 
+            vulputate odio ut enim blandit volutpat. Tristique senectus et netus et. Arcu cursus vitae congue mauris 
+            rhoncus aenean vel elit scelerisque. Cursus risus at ultrices mi tempus imperdiet nulla malesuada 
+            pellentesque. Varius duis at consectetur lorem donec massa sapien. Nulla aliquet porttitor lacus luctus 
+            accumsan tortor posuere ac ut. Turpis in eu mi bibendum neque. Cum sociis natoque penatibus et magnis. Sit 
+            amet commodo nulla facilisi nullam vehicula ipsum a. Et pharetra pharetra massa massa ultricies mi quis 
+            hendrerit dolor.
+        </p>
+        <p>
+            Purus sit amet volutpat consequat. Sapien eget mi proin sed libero enim. Vitae nunc sed velit dignissim 
+            sodales ut eu. Mattis rhoncus urna neque viverra justo nec ultrices. Nunc mi ipsum faucibus vitae aliquet. 
+            Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Sed vulputate odio ut enim blandit. Commodo 
+            ullamcorper a lacus vestibulum sed arcu non odio euismod. Pulvinar sapien et ligula ullamcorper malesuada 
+            proin. Accumsan tortor posuere ac ut consequat semper viverra nam libero. Nibh sit amet commodo nulla 
+            facilisi nullam vehicula ipsum. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Quis 
+            eleifend quam adipiscing vitae proin. Pellentesque diam volutpat commodo sed egestas egestas fringilla 
+            phasellus. Est placerat in egestas erat imperdiet. Nulla facilisi cras fermentum odio.
+        </p>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>JS Review Assignment</title>
+
+    <script>
+    
+/* Smaller number section/*/
+            var N = parseInt(prompt("Enter numbers you would like to compare."));
+
+            var currentSmallest;
+            //repeat N times
+            for(var x = 1; x >= N; x++){
+
+                //take an input
+                var num = parseInt(prompt("Enter an integer."));
+                //document.write("<p>" +num+ "</p>");
+
+                //if this is the 1st input, initialize current largest to this input
+                if(x == 1){
+                    currentSmallest = num;
+                }
+
+                //compare currentLargest with your input
+                if(x > currentSmalleest){
+                    currentSmallest = num;
+                }
+                
+            }//end of for loop
+
+            document.write("<h1>The Smallest of" +N+ " numbers is"+currenSmallest+ "</h1>");
+    </script>
+</head>
+
+<body>
+<!--#1: Write a JavaScript program to find the second smallest number among N 
+user provided integer inputs.
+Today is : Friday. Current time is : 4 PM : 50 : 22 
+-->
+
+<!--
+#3: Write a JavaScript program to list the dates of all Sundays that happened 
+on 1st January between the years 2000 and 2021
+
+#4: (Book problem 7.16)-->
+</body>
+</html>
+

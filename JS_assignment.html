@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>JS assignment</title>
+<style>
+    .important {
+         font-weight: bold;
+         font-size: xx-large;
+    }
+    .blue {
+        color: blue;
+     }
+     .orange {
+        color: orange;
+     }
+     a {
+        text-decoration: none;
+     }
+     #div6:hover{
+        font-weight: bold;
+     }
+</style>
+<script>
+    function myFunction() {
+      var x = document.getElementById("mySelect");
+      x.remove(x.selectedIndex);
+    }
+
+
+    function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+            }else {
+            localStorage.clickcount = 1;
+            }
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    }
+
+
+    $(document).ready(function(){
+        $("#BB").click(function(){
+            $("#div1").addClass("important blue");
+        });
+    });
+    $(document).ready(function(){
+        $("#OB").click(function(){
+            $("#div1").addClass("important orange");
+        });
+    });
+
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me";
+    }
+    function mUp(obj) {
+        obj.style.backgroundColor="blanchedalmond";
+        obj.innerHTML="Thank You";
+    }
+    $(document).ready(function(){
+            $("#div6").hover(function(){
+                $("#div6").addClass("bold");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        Select the creature that is not a fish:
+        <p></p>
+        <select id="mySelect" size="4">
+          <option>Clownfish</option>
+          <option>Starfish</option>
+          <option>Angel-Fish</option>
+          <option>Blob-Fish</option>
+        </select>
+      </form>
+      <p></p>
+      <button onclick="myFunction()">Remove selected Creature</button>
+
+    <div>
+        <p>Click the button to see the counter increase.</p>
+        <button onclick="clickCounter()" type="button">Click me!</button>
+        <p></p>
+        <div id="result"></div>
+    </div>  
+    <div>
+        <div id="div1">The Starfish is not a fish.</div>
+        <div id="div2">The Angel Fish, Clownfish, and Blob fish are all fish.</div>
+        <p></p>
+        <p>The buttons will change the sentence about the starfish.</p>
+        <button id="BB">Blue and size change</button>
+        <button id="OB">Orange and size change</button>
+    </div>
+    <p></p>
+    <div>
+        <div id="div6" onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:blanchedalmond;width:90px;height:20px;padding:40px;">
+            Click Me</div>
+    </div>
+</body>
+</html>

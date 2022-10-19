@@ -3,16 +3,17 @@
     <meta charset="utf-8">
     <title>With JQuery</title>
     <style>
-        #div1.hidden{
-            display: none
+        #div1 {
+            border: 2px solid;
+            background-color: antiquewhite;
+            margin: 5px;
+            padding: 10px;
         }
-        
-        #div1.onclick{
-            border: solid 2px orangered;
-            background-color: azure;
+        .change{
+            border: 3px dashed gray;
+            background-color: lightblue;
             width: 50%;
-            height: fit-content;
-            
+            height: 50%;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,7 +26,7 @@
             document.getElementById("input2").value = val1;
         }*/
         $(document).ready(function(){
-            $("button").click(function(){
+            $("#switch").click(function(){
                 var val1 = $("#input1").val();
                 var val2 = $("#input2").val();
 
@@ -34,10 +35,56 @@
             });
         });
 
-        $(document).ready(function() {
-             $("div#div1").removeClass("hidden");
+
+        $(document).ready(function(){
+            $("#box").click(function(){
+                $("#div1").addClass("change");
+            });
         });
-        
+
+
+        $(document).ready(function(){
+            $("#hide1").click(function(){
+                $("#p1").hide();
+            });
+            $("#show1").click(function(){
+                $("#p1").show();
+            });
+        });
+        $(document).ready(function(){
+            $("#hide2").click(function(){
+                $("#p2").hide();
+            });
+            $("#show2").click(function(){
+                $("#p2").show();
+            });
+        });
+        $(document).ready(function(){
+            $("#hide3").click(function(){
+                $("#p3").hide();
+            });
+            $("#show3").click(function(){
+                $("#p3").show();
+            });
+        });
+
+
+        $(document).ready(function(){
+            $("#show1").click(function(){
+                $("#p1").fadeIn("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#show2").click(function(){
+                $("#p2").fadeIn("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#show3").click(function(){
+                $("#p3").fadeIn("slow");
+            });
+        });
+
     </script>
 </head>
 <body>
@@ -49,9 +96,10 @@
     <label>Input 2 </label>
     <input type="text" name="ip2" id="input2">
     <p></p>
-    <button>Switch Values</button>
+    <button id="switch">Switch Values</button>
     <div id="div1">
-        <p>
+        <button id="box">Resize</button>
+        <p id="p1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
             dolore magna aliqua. Orci a scelerisque purus semper eget duis at tellus. Cursus metus aliquam eleifend mi 
             in nulla posuere sollicitudin. Aliquam purus sit amet luctus. Ullamcorper eget nulla facilisi etiam. Elit 
@@ -62,7 +110,9 @@
             quam pellentesque nec nam. Venenatis lectus magna fringilla urna porttitor rhoncus. Dictumst quisque sagittis 
             purus sit amet volutpat consequat mauris. Eu nisl nunc mi ipsum faucibus vitae aliquet.
         </p>
-        <p>
+        <button id="hide1">Hide</button>
+        <button id="show1">Show</button>
+        <p id="p2">
             Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Maecenas volutpat blandit aliquam etiam erat. 
             Enim neque volutpat ac tincidunt vitae. Id leo in vitae turpis massa. In arcu cursus euismod quis. Quis 
             viverra nibh cras pulvinar mattis nunc sed. At urna condimentum mattis pellentesque id nibh. Risus sed 
@@ -73,7 +123,9 @@
             amet commodo nulla facilisi nullam vehicula ipsum a. Et pharetra pharetra massa massa ultricies mi quis 
             hendrerit dolor.
         </p>
-        <p>
+        <button id="hide2">Hide</button>
+        <button id="show2">Show</button>
+        <p id="p3">
             Purus sit amet volutpat consequat. Sapien eget mi proin sed libero enim. Vitae nunc sed velit dignissim 
             sodales ut eu. Mattis rhoncus urna neque viverra justo nec ultrices. Nunc mi ipsum faucibus vitae aliquet. 
             Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Sed vulputate odio ut enim blandit. Commodo 
@@ -82,7 +134,9 @@
             facilisi nullam vehicula ipsum. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Quis 
             eleifend quam adipiscing vitae proin. Pellentesque diam volutpat commodo sed egestas egestas fringilla 
             phasellus. Est placerat in egestas erat imperdiet. Nulla facilisi cras fermentum odio.
-        </p>    
+        </p>
+        <button id="hide3">Hide</button>
+        <button id="show3">Show</button>
     </div>
 </body>
 </html>

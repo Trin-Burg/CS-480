@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page3 Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <il class="nav-item"><a class="nav-link" href="index-Boot.html">Home</a></il>
+                <il class="nav-item"><a class="nav-link" href="p2-Boot.html">Buttons</a></il>
+                <il class="nav-item"><a class="nav-link active" href="p3-Boot.html">Popover</a></il>
+                <il class="nav-item"><a class="nav-link" href="p4-Boot.html">My Choice</a></il>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="container mt-5">
+            <h3>Popover Positioning</h3>
+            <p>Click on the links to see the popover in action:</p>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Ac odio tempor orci dapibus. Phasellus faucibus scelerisque eleifend donec pretium 
+            vulputate sapien nec sagittis. Ut porttitor leo a diam sollicitudin tempor id eu nisl.">Top</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Ornare lectus sit amet est placerat in egestas erat imperdiet.">Bottom</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Placerat duis ultricies lacus sed turpis tincidunt id.">Left</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. 
+            Interdum varius sit amet mattis vulputate enim nulla aliquet porttitor.">Right</a>
+          </div>
+          <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl)
+            })
+            </script>
+    </div>
+    <div>
+        <div class="container mt-3">
+            <h3>Dismissible Popover</h3>
+            
+            <a href="#" title="Dismissible popover" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum.">Click Here</a>
+          </div>
+          
+          <script>
+          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+          })
+          </script>
+    </div>
+    <div>
+        <div class="container mt-3">              
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="p2-Boot.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="index-Boot.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="p2-Boot.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="p3-Boot.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="p4-Boot.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="p4-Boot.html">Next</a></li>
+            </ul>
+          </div>
+    </div>
+</body>
+</html>
+</html>
